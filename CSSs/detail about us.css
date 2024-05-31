@@ -1,0 +1,478 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: Roboto, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --white-color: rgb(255, 255, 255);
+    --black-color: #000000;
+    /* copy color */
+    --Blue: hsl(246, 80%, 60%);
+    --Light-red: hsl(15, 100%, 70%);
+    --Soft-blue: hsl(195, 74%, 62%);
+    --Light-red2: hsl(348, 100%, 68%);
+    --Lime-green: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Soft-orange: hsl(43, 84%, 65%);
+
+    /* Secondary Colours */
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+    --hover-color: #34397b;
+    --pink-color: #f2bb05;
+    /* normal font */
+    --font-1: 1rem;
+    --font-125: 1.25rem;
+    --font-15: 1.5rem;
+    --font-2: 2rem;
+    --font-25: 2.5rem;
+    --font-3: 3rem;
+    --font-35: 3.5rem;
+    --font-4: 4rem;
+    --font-45: 4.5rem;
+
+}
+
+.nav_bar{
+    background: var(--Dark-blue);
+}
+
+
+#SERVICES {
+    padding: 10% 0px 0px 0px ;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+img{
+    border-radius: 20px;
+}
+
+
+.services-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.heading-main-text {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 800;
+    cursor: pointer;
+    color: var(--text-color);
+}
+/* .heading-main-text:hover {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    color: gray;
+} */
+.sub-heading-text {
+    margin: 0;
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+/* MAIN SECTION */
+.services-main-section {
+    width: 100%;
+    margin-top: 40px;
+}
+/* STORAGE */
+.STORAGE, 
+.LOGISTICS,
+.CARGO, 
+.TRUCKING,
+.WAREHOUSING, 
+.PACKAGING {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.heading-for-each-service p{
+    font-size: var(--font-1);
+    font-weight: 800;
+    color: #45069c;
+    margin: 0;
+}
+/* .heading-for-each-service {
+    position: relative;
+    border-left: 7px solid #45069c;
+    border-right: 7px solid #45069c;
+    border-radius: 10px;
+    padding: 7px;
+    
+} */
+.each-service-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    gap: 30px;
+    padding-top: 50px;
+    
+}
+.each-service-details img {
+    width: 900px;
+    margin: 0;
+    padding: 0;
+}
+ .text {
+    height: max-content;
+   padding: 5px;
+   width: 900px;
+   color: var(--text-color);
+}
+
+.text p {
+    margin: 0;
+  font-weight: 300;
+  font-size: 19px;
+  text-align: justify;
+
+}
+strong {
+    font-weight: 600;
+    color:  #45069c;
+}
+
+
+
+/* MEDIA QUERIES  */
+
+/* LARGE DISPLAYS  */
+@media screen and (min-width: 2570px) {
+}
+/*......................... LAPTOP DISPLAYS ...............  */
+@media screen and (min-width: 930px) and (max-width: 1440px)
+{
+    #SERVICES {
+        padding: 100px 10px 10px 10px ;
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .services-heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .heading-main-text {
+        margin: 0;
+        font-size: 40px;
+        font-weight: 800;
+        cursor: pointer;
+    }
+    /* .heading-main-text:hover {
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        color: gray;
+    } */
+    .sub-heading-text {
+        margin: 0;
+        padding-top: 10px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    
+    /* MAIN SECTION */
+    .services-main-section {
+        width: 100%;
+        margin-top: 40px;
+
+    }
+    /* STORAGE */
+    .STORAGE, 
+    .LOGISTICS,
+    .CARGO, 
+    .TRUCKING,
+    .WAREHOUSING, 
+    .PACKAGING {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+    }
+    .heading-for-each-service p{
+        font-size: var(--font-1);
+        font-weight: 800;
+        color: #45069c;
+        margin: 0;
+    }
+    /* .heading-for-each-service {
+        position: relative;
+        border-left: 7px solid #45069c;
+        border-right: 7px solid #45069c;
+        border-radius: 10px;
+        padding: 7px;
+        
+    } */
+    .each-service-details {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        padding-top: 0px;
+    }
+    .each-service-details img {
+        width: 50%;
+
+    }
+    .service-image img{
+        width: 500px;
+
+    }
+    .text {
+        height: max-content;
+       padding: 5px;
+       padding: 5px 20px 5px 5px;
+       width: 100%;
+    }
+    .text p {
+        margin: 0;
+        font-weight: 300;
+        font-size: var(--font-1);
+        text-align: justify;
+    
+    }
+    strong {
+        font-weight: 600;
+        color:  #45069c;
+    }
+    
+}
+
+/* MOBILE PHONES  DISPLAYS  */
+@media screen and (min-width: 770px) and (max-width: 929px)
+{
+    #SERVICES {
+        padding: 100px 0px 0px 0px ;
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .services-heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .heading-main-text {
+        margin: 0;
+        font-size: 40px;
+        font-weight: 800;
+        cursor: pointer;
+    }
+    /* .heading-main-text:hover {
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        color: gray;
+    } */
+    .sub-heading-text {
+        margin: 0;
+        padding-top: 10px;
+        font-size: var(--font-1);
+        font-weight: 400;
+    }
+    
+    /* MAIN SECTION */
+    .services-main-section {
+        width: 100%;
+        margin-top: 40px;
+
+    }
+    /* STORAGE */
+    .STORAGE, 
+    .LOGISTICS,
+    .CARGO, 
+    .TRUCKING,
+    .WAREHOUSING, 
+    .PACKAGING {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .heading-for-each-service p{
+        font-size: var(--font-1);
+        font-weight: 800;
+        color: #45069c;
+        margin: 0;
+    }
+    /* .heading-for-each-service {
+        position: relative;
+        border-left: 7px solid #45069c;
+        border-right: 7px solid #45069c;
+        border-radius: 10px;
+        padding: 7px;
+        
+    } */
+    .each-service-details {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        padding-top: 0px;
+    }
+    .each-service-details img {
+        width: 48%;
+        aspect-ratio: 1.1;
+        margin: 0;
+        padding: 0;
+    }
+     .text {
+        height: max-content;
+       padding: 5px;
+       width: 48%;
+    }
+    .text p {
+        margin: 0;
+        font-weight: 300;
+        font-size: 10px;
+        text-align: justify;
+    
+    }
+    strong {
+        font-weight: 600;
+        color:  #45069c;
+    }
+    
+}
+/* MOBILE PHONES  DISPLAYS  */
+@media screen and (min-width: 320px) and (max-width: 769px)
+{
+    #SERVICES {
+        padding: 150px 0px 0px 0px ;
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .services-heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: -30px;
+    }
+    .heading-main-text {
+        margin: 0;
+        font-size: var(--font-2);
+        font-weight: 800;
+        cursor: pointer;
+        color: var(--pink-color);
+    }
+    /* .heading-main-text:hover {
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        color: gray;
+    } */
+    .sub-heading-text {
+        margin: 0;
+        padding-top: 10px;
+        font-size: var(--font-1);
+        font-weight: 400;
+    }
+    
+    /* MAIN SECTION */
+    .services-main-section {
+        width: 100%;
+        margin-top: 40px;
+
+    }
+    /* STORAGE */
+    .STORAGE, 
+    .LOGISTICS,
+    .CARGO, 
+    .TRUCKING,
+    .WAREHOUSING, 
+    .PACKAGING {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .heading-for-each-service p{
+        font-size: var(--font-1);
+        font-weight: 800;
+        color: #45069c;
+        margin: 0;
+    }
+    /* .heading-for-each-service {
+        position: relative;
+        border-left: 7px solid #45069c;
+        border-right: 7px solid #45069c;
+        border-radius: 10px;
+        padding: 7px;
+        
+    } */
+    .each-service-details {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        padding-top: 0px;
+    }
+    .each-service-details img {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+     .text {
+        height: max-content;
+        padding: 5px;
+        width: 90%;
+    }
+    .service-image {
+        width: 90%;
+
+    }
+    .text p {
+        margin: 0;
+        font-weight: 300;
+        font-size: var(--font-1);
+        line-height: 20px;
+        text-align: justify;
+    
+    }
+    strong {
+        font-weight: 600;
+        color:  #45069c;
+    }
+    
+}

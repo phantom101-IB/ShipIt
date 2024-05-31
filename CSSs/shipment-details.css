@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: Roboto, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --white-color: rgb(255, 255, 255);
+    --black-color: #000000;
+    /* copy color */
+    --Blue: hsl(246, 80%, 60%);
+    --Light-red: hsl(15, 100%, 70%);
+    --Soft-blue: hsl(195, 74%, 62%);
+    --Light-red2: hsl(348, 100%, 68%);
+    --Lime-green: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Soft-orange: hsl(43, 84%, 65%);
+
+    /* Secondary Colours */
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+    --hover-color: #34397b;
+    --pink-color: #f2bb05;
+    /* normal font */
+    --font-1: 1rem;
+    --font-125: 1.25rem;
+    --font-15: 1.5rem;
+    --font-2: 2rem;
+    --font-25: 2.5rem;
+    --font-3: 3rem;
+    --font-35: 3.5rem;
+    --font-4: 4rem;
+    --font-45: 4.5rem;
+
+}
+
+.nav_bar{
+    background: var(--Dark-blue);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.package-user-details{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    margin-top: 10%;
+
+}
+
+.package-user-details h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: var(--Violet);
+}
+
+.package-user-details .pp-details, .to-fro-location{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+    width: 50%;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.to-fro-location p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    padding: 5px 0px 5px 0px;
+}
+.to-fro-location h4{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+.pp-details p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    padding: 5px 0px 5px 0px;
+
+}
+.pp-details h4{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+.packager-details{
+    display: grid;
+    width: 100%;
+    place-items: center;
+}
+
+.packager-details .ph-ctrl{
+    width: 50%;
+    display: grid;
+    /* justify-content: center; */
+}
+
+.packager-details .ph-ctrl .pp-control {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+}
+
+.packager-details h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    padding: 5px 0px 5px 0px;
+    color: var(--pink-color);
+}
+
+.pp-control div h4{
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px 0px 5px 0px;
+    color: var(--Violet);
+}
+
+.pp-control div p{
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.travel-history{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.travel-history h3{
+    font-family: Roboto, Arial;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+table{
+    width: 70%;
+    border: 1px solid var(--Pale-Blue);
+    border-collapse: collapse;
+}
+
+/* table thead tr{
+    background: var(--pink-color);
+} */
+
+table thead tr td{
+    padding: 5px 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 16px;
+    background: var(--Very-dark-blue);
+    color: var(--white-color);
+    /* border-bottom: 1px solid var(--Very-dark-blue); */
+    /* margin-right: 20px; */
+}
+
+tbody{
+    width: 100%;
+}
+
+
+tbody tr td{
+    font-size: 14px;
+    padding: 5px 0px 5px 5px;
+    font-family: 'Times New Roman', Times, serif;
+   
+}
+
+tbody tr:nth-child(odd){
+    background: rgb(114, 111, 104);
+    color: var(--white-color);
+}

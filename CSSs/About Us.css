@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: Roboto, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --white-color: rgb(255, 255, 255);
+    --black-color: #000000;
+    /* copy color */
+    --Blue: hsl(246, 80%, 60%);
+    --Light-red: hsl(15, 100%, 70%);
+    --Soft-blue: hsl(195, 74%, 62%);
+    --Light-red2: hsl(348, 100%, 68%);
+    --Lime-green: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Soft-orange: hsl(43, 84%, 65%);
+
+    /* Secondary Colours */
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+    --hover-color: #34397b;
+    --pink-color: #f2bb05;
+    /* normal font */
+    --font-1: 1rem;
+    --font-125: 1.25rem;
+    --font-15: 1.5rem;
+    --font-2: 2rem;
+    --font-25: 2.5rem;
+    --font-3: 3rem;
+    --font-35: 3.5rem;
+    --font-4: 4rem;
+    --font-45: 4.5rem;
+
+}
+
+/* About Us styling */
+.nav_bar{
+    background: #34397b !important;
+}
+
+.About-Us{
+    padding: 5% 10% ;
+}
+
+.About-Us h1{
+    text-align: center;
+    font-size: var(--font-35);
+    color: #f2bb05;
+}
+
+.About-Us p{
+    font-size: 1.2rem;
+}
+
+.text-about{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}
+
+.text-about h4{
+    font-size: var(--font-3);
+    text-align: center;
+    color: #34397b;
+
+}
+
+.text-about h4 span{
+    color: #f2bb05;
+}
+
+.text-about h3{
+    font-size: var(--font-15);
+    text-align: center;
+    color: #34397b;
+
+}
+
+.text-about h6{
+    font-size: 1.2rem;
+}
+
+.text-about li{
+    list-style-type: disc;
+    font-size: 1.2rem;
+    margin-left: 3%;
+    line-height: 30px;
+}
+
+.text-about p{
+    line-height: 30px;
+    text-align: justify;
+}
+
+.our-mission h4{
+    font-size: var(--font-125);
+    color: #34397b;
+}
+
+.our-mission p{
+    font-size: 1.2rem;
+}

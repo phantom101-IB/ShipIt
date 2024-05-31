@@ -1,0 +1,652 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: Roboto, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --white-color: rgb(255, 255, 255);
+    --black-color: #000000;
+    /* copy color */
+    --Blue: hsl(246, 80%, 60%);
+    --Light-red: hsl(15, 100%, 70%);
+    --Soft-blue: hsl(195, 74%, 62%);
+    --Light-red2: hsl(348, 100%, 68%);
+    --Lime-green: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Soft-orange: hsl(43, 84%, 65%);
+
+    /* Secondary Colours */
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+    --hover-color: #34397b;
+    --pink-color: #f2bb05;
+    /* normal font */
+    --font-1: 1rem;
+    --font-125: 1.25rem;
+    --font-15: 1.5rem;
+    --font-2: 2rem;
+    --font-25: 2.5rem;
+    --font-3: 3rem;
+    --font-35: 3.5rem;
+    --font-4: 4rem;
+    --font-45: 4.5rem;
+
+}
+
+/* body{
+    overflow: hidden;
+} */
+
+/* nav bar styles */
+.nav_bar div:first-child{
+    display: none;
+    transition: all 0.55s;
+}
+/* .humburger-menu{
+    display: none;
+} */
+
+.nav_bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: aqua; */
+    padding: 0 10%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.Logo a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.Logo a img{
+    width: 100px;
+    margin-bottom: -2%;
+    opacity: 0.7;
+    transition: all 0.55s;
+}
+
+.Logo a img:hover{
+    opacity: 1;
+}
+
+.Logo a p{
+    font-size: var(--font-1);
+    font-family: Roboto;
+    font-weight: 500;
+    color: var(--white-color);
+}
+
+.nav_content{
+    display: flex;
+    gap: 20px;
+    font-size: var(--font-125);
+}
+
+.nav_content a{
+    font-family: Roboto Slab;
+    color: var(--white-color);
+    font-weight: 500;
+    position: relative;
+}
+
+.nav_content a::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: var(--Light-red2);
+    position: absolute;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.55s;
+}
+
+.nav_content a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+    
+}
+
+/* Landong page styling*/
+#Home-page{
+    padding: 0 5%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(90deg, rgba(1, 60, 199, 0.8) 0%, rgba(81, 1, 107, 0.8) 65%, rgba(2,29, 151, 0.7) 100%), url(/Images/Cargo.jpg) no-repeat center center/cover;
+    box-shadow: inset 10px 20px 100px rgba(0, 0, 0, 0.5);
+}
+
+.main-control-div{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+}
+
+.shipit-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* line-height: 60px; */
+}
+
+.shipit{
+    font-size: 7rem;
+    font-family: Roboto Slab;
+    font-weight: 600;
+    color: var(--white-color);
+    letter-spacing: 15px;
+    margin-bottom: 10px;
+    transition: all 0.55s;
+}
+
+.shipit-div h3{
+    font-size: var(--font-25);
+    letter-spacing: 30px;
+    color: var(--white-color);
+    margin-bottom: 10px;
+    margin-left: 20px;
+    transition: all 0.55s;
+}
+
+.shipit-div h6{
+    font-size: var(--font-2);
+    transition: all 0.55s;
+}
+
+.form-div p{
+    margin-top: 10px;
+    font-size: var(--font-1);
+    color: red;
+    font-weight: 500;
+}
+
+.shipit-div h6 #move{
+    color: var(--pink-color);
+}
+
+.shipit-div h6 #digital{
+    color: var(--Lime-green);
+}
+
+.shipit-div h6 #forward{
+    color: var(--Light-red);
+}
+
+
+.form-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-div h6{
+    font-size: var(--font-2);
+    color: var(--white-color);
+    margin-bottom: 20px;
+}
+
+.main-form{
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    /* flex-shrink:initial;  */
+}
+
+.main-form input{
+    width: 1875%;
+    font-size: var(--font-1);
+    padding: 18px 20px;
+    outline: none;
+    font-weight: 500;
+    border: none;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.main-form button{
+    width: 937.5%;
+    padding: 15px 20px;
+    font-size: var(--font-1);
+    font-weight: 700;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.55s;
+    background: var(--Lime-green);
+}
+
+.main-form button:hover{
+    background-color: var(--Very-dark-blue);
+    color: var(--white-color);
+}
+
+/* services page */
+#Services{
+    background: url(/Images/flight\ ship.webp) no-repeat center center/cover;
+    margin-top: 30px;
+}
+.service-ctrl-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4% 2%;
+}
+
+.our-service h3{
+    font-size: var(--font-3);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.our-service h6{
+    font-size: var(--font-15);
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 10px;
+    margin-bottom: 3%;
+
+}
+
+.service-images{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    place-items: center;
+    gap: 10px;
+    padding-top: 2%;
+}
+
+.service-images div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10%; 
+    cursor: pointer;
+    transition: all 0.55s;
+}
+
+.service-images div:hover{
+    transform: scale(1.02);
+}
+
+.service-images img{
+    width: 100%;
+    border-radius: inherit;
+}
+
+.service-images div .text-div{
+    position: absolute;
+    color: var(--white-color);
+    font-weight: 700;
+    letter-spacing: 3px;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.9); 
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    transition: all 0.55s;
+}
+
+.service-images div .text-div:hover{
+    box-shadow: none;
+}
+
+.service-images div .text-div p{
+    transition: transform 0.55s;
+}
+
+.service-images div .text-div:hover p{
+    transform: translateY(250%);
+    color: var(--Soft-orange);
+}
+
+.read-more{
+    width: 200px;
+    height: 50px;
+    font-size: var(--font-125);
+    padding: 0.7% 1.5%;
+    border-radius: 50px;
+    background: var(--Blue);
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    color: var(--Soft-orange);
+    transition: all 0.55s;
+    margin-top: 2%;
+}
+
+.read-more a{
+    color: inherit;
+}
+
+.read-more:hover{
+    background: var(--Very-dark-blue);
+    color: var(--white-color);
+}
+
+
+
+/* Specialization styling */
+#specialization{
+    margin-top: 5%;
+    padding: 0% 5% 0% 5%;
+    /* background: url(/Images/Untitled\ design.webp) no-repeat center center/cover; */
+}
+
+
+.Specialization{
+    width: 100%;
+    display: flex;
+}
+
+.spec-control{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.specialization-head h3{
+    font-size: 1.8rem;
+    margin-bottom: 5%;
+    color: #f8c009;
+}
+
+.spec-details{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.spec-details div{
+    text-align: center;
+    padding: 10px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 30%;
+    cursor: pointer;
+}
+
+.spec-details div img{
+    height: 120%;
+}
+
+.spec-details div h4{
+    width: 60%;
+    text-align: center;
+    font-size: var(--font-125);
+    color: var(--Violet);
+    margin-top: 5%;
+}
+
+.customer-care{
+    /* width: 100%; */
+    display: grid;
+    grid-template-columns: 106px 550px;
+    gap: 20px;
+}
+
+.customer-care .cus-ser-text h4{
+    color: var(--Lime-green);
+    font-size: 1.7rem;
+}
+
+.customer-care .cus-ser-text h4 a{
+    text-decoration: underline;
+    color: red;
+}
+
+.customer-care p{
+    font-size: var(--font-125);
+}
+
+.world-div{
+   overflow: hidden;
+
+}
+
+/* Buyer's Consolidation */
+.consolidation-ctrl{
+    display: grid;
+    place-items: center;
+}
+
+.consolidation h4{
+    font-size: var(--font-2);
+    color: #461c5a;
+
+}
+
+.consolidation h6{
+    font-size: var(--font-15);
+    color: #f8c009;
+}
+
+/* insurance policy style */
+
+#insurance-policy{
+    margin-top: 3%;
+    /* padding: 0px 10px 0px 10px; */
+}
+
+.insurance-head{
+    height: 60vh;
+    /* background-color: #34397b; */
+    background:rgba(0, 0, 0, 0.7) url(/Images/insurance\ 1.webp) no-repeat center center/cover;
+    box-shadow: inset 0 0 500px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.insurance-head h3{
+    font-size: var(--font-3);
+    color: var(--white-color);
+}
+
+.insurance-head h6{
+    font-size: 1.25em;
+    color: var(--white-color);
+}
+
+.insurance-details{
+    margin-top: 5%;
+    padding: 0 10%;
+}
+
+.insurance-details h4{
+    color: #461c5a;
+    margin-bottom: 10px;
+    font-size: var(--font-15);
+}
+
+.insurance-details p{
+    font-size: var(--font-125);
+    font-style: justify;
+    line-height: 30px;
+}
+
+.insurance-list{
+    background: #461c5a;
+    padding: 3%;
+    width: 50%;
+}
+
+.insurance-list h5{
+    color: #f8c009;
+    margin-bottom: 10px;
+    font-size: var(--font-15);
+}
+
+.insurance-list li{
+    list-style: disc;
+    margin-left: 4%;
+    color: var(--Lime-green);
+}
+
+/* Licence Styles */
+#License{
+    margin-top: 3%;
+    background: #ffd036;
+}
+
+.license-ctrl{
+    padding: 2% 10%;
+}
+
+.license-ctrl h3{
+    font-size: var(--font-35);
+    text-align: center;
+    color: var(--white-color);
+}
+
+.list-ctrl{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    place-items: center;
+}
+
+.list-ctrl h4{
+    font-size: var(--font-15);
+    color: #461c5a;
+}
+
+.list-ctrl li{
+    list-style-type: disc;
+    margin-left: 2%;
+    max-width: 450px;
+    font-size: var(--font-125);
+    margin-bottom: 2%;
+}
+/* foot styles */
+
+#footer{
+    padding: 5% 10%;
+    background: #461c5a;
+    /* height: 40vh; */
+    display: grid;
+    place-items: center;
+}
+
+.foot-ctrl{
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    display: flex;
+    align-items: center;
+  
+}
+
+.shipit-foot{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 30px;
+}
+
+.shipme h3{
+    font-size: var(--font-2);
+    color: #f8c009;
+}
+
+.shipme h3 span{
+    color: var(--Lime-green);
+    font-family: Rubik;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.icons i{
+    font-size: var(--font-125);
+    color: #ffffff;
+    cursor: pointer;
+    
+}
+
+.copt-ctrl{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.copyright{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--white-color);
+}
+
+.copyright p{
+    flex-wrap: nowrap;
+}
+
+.form-main{
+    display: grid;
+    gap: 10px;
+}
+
+.form-main input{
+    width: 250px;
+    padding: 10px;
+    outline: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    font-size: var(--font-1);
+    border: none;
+}
+
+.form-main textarea{
+    height: 100px;
+    padding: 10px;
+    font-size: var(--font-1);
+    outline: none;
+}
+
+.form-main button{
+    padding: 10px;
+    font: var(--font-1);
+    font-weight: 500;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.message-main p{
+    color: var(--white-color);
+    padding: 10px;
+
+}

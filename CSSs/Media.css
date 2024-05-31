@@ -1,0 +1,535 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: Roboto, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --white-color: rgb(255, 255, 255);
+    --black-color: #000000;
+    /* copy color */
+    --Blue: hsl(246, 80%, 60%);
+    --Light-red: hsl(15, 100%, 70%);
+    --Soft-blue: hsl(195, 74%, 62%);
+    --Light-red2: hsl(348, 100%, 68%);
+    --Lime-green: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Soft-orange: hsl(43, 84%, 65%);
+
+    /* Secondary Colours */
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+    --hover-color: #34397b;
+    --pink-color: #f2bb05;
+    /* normal font */
+    --font-1: 1rem;
+    --font-125: 1.25rem;
+    --font-15: 1.5rem;
+    --font-2: 2rem;
+    --font-25: 2.5rem;
+    --font-3: 3rem;
+    --font-35: 3.5rem;
+    --font-4: 4rem;
+    --font-45: 4.5rem;
+
+}
+
+
+@media screen and (max-width: 767px) {
+
+    /* nav page */
+    .nav_bar{
+        padding: 0 5%;
+        display: grid;
+        grid-template-columns: 100px 1fr;
+    }
+
+    .Logo a img{
+        width: 100%;
+    }
+
+    /* .customer-care{
+        width: 100%;
+    } */
+
+    .nav_content a li{
+        font-size: var(--font-1);
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        font-family: Roboto, Arial, sans-serif;
+    }
+
+
+    /* landing page media */
+    .main-control-div{
+        flex-direction: column;
+    }
+
+    .shipit-div .shipit{
+        font-size: var(--font-4);
+    }
+
+    .shipit-div h3{
+        font-size: var(--font-2);
+        letter-spacing: 20px;
+    }
+
+    .shipit-div h6{
+        font-size: var(--font-15);
+    }
+
+    .form-div h6{
+        font-size: var(--font-15);
+    }
+
+    /* Services media */
+
+    .service-images{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* consolidation */
+
+    .consolidation img{
+        width: 100%;
+    }
+    /* License styles */
+    .license-ctrl h3{
+        font-size: var(--font-25);
+    }
+
+    .list-ctrl h4{
+        font-size: var(--font-125);
+    }
+
+    .list-ctrl li{
+        font-size: var(--font-1);
+    }
+}
+
+/* 450 media */
+
+@media screen and (max-width: 450px){
+    /* nav 450 media */
+    .nav_bar div:first-child{
+        display: block;
+    }
+
+    .humburger-menu{
+        display: block;
+        font-size: 30px;
+        color: var(--Pale-Blue);
+        cursor: pointer;
+    }
+
+    /* .humburger-menu i{
+        font-size: var(--font-125);
+    } */
+
+    .nav_bar{
+        padding: 0 5%;
+        display: flex;
+    }
+
+    .Logo a img{
+        width: 100px;
+    }
+
+    .nav_content{
+        position: absolute;
+        flex-direction: column;
+        padding: 20px;
+        background: var(--Desaturated-blue);
+        /* backdrop-filter: blur(10px); */
+        left: -200px;
+        top: 70px;
+        /* bottom: 0; */
+        border-radius: 10px;
+        transition: all 0.55s;
+    }
+
+    .nav_content.active{
+        left: 0;
+    }
+
+    .nav_content a li{
+        font-size: var(--font-1);
+        /* color: var(--black-color); */
+    }
+
+    .nav_content a::after{
+        display: none;
+    }
+
+    /* landing page */
+
+    .shipit-div .shipit{
+        font-size: var(--font-25);
+        text-align: center;
+    }
+
+    .shipit-div h3{
+        font-size: var(--font-125);
+        letter-spacing: 15px;
+    }
+
+    .shipit-div h6{
+        font-size: var(--font-1);
+    }
+
+    .form-div h6{
+        font-size: var(--font-125);
+    }
+
+    .form-div{
+        margin-top: 50px;
+    }
+
+    .main-form{
+        width: 100%;
+        height: 50px;
+        
+    }
+
+    /* Services */
+
+    .our-service h3{
+        font-size: var(--font-15);
+        color: var(--Dark-blue);
+    }
+
+    .our-service h6{
+        font-size: var(--font-125);
+        letter-spacing: 5px;
+        color: var(--Soft-orange);
+    }
+
+    .service-images{
+        grid-template-columns: 1fr;
+        width: 70%;
+    }
+    /* Specialization */
+
+    .spec-control{
+        width: 100%;
+    }
+
+    .specialization-head h3{
+        font-size: var(--font-1);
+        /* width: 300px; */
+    }
+
+    .spec-details{
+        grid-template-columns: 1fr;
+    }
+
+    .spec-details div{
+        margin-bottom: 10%;
+    }
+
+    .customer-care{
+        width: 100%;
+        grid-template-columns:40px 1fr;
+
+    }
+
+    .customer-care img{
+        width: 40px;
+    }
+
+    .cus-ser-text{
+        width: 100%;
+    }
+
+    .customer-care .cus-ser-text h4{
+        font-size: var(--font-125);
+    }
+
+    .customer-care .cus-ser-text p{
+        font-size: var(--font-1);
+    }
+
+    .world-div{
+        display: none;
+    }
+
+    /* consolidation */
+
+    .consolidation-ctrl{
+        margin-top: 10%;
+    }
+
+    .consolidation h4{
+        font-size: var(--font-15);
+    }
+
+    /* cargo insurance */
+
+    .insurance-head{
+        padding: 3%;
+    }
+
+    .insurance-head h3{
+        font-size: var(--font-2);
+    }
+
+    .insurance-head h6{
+        font-size: var(--font-125);
+    }
+
+    .insurance-details h4{
+        font-size: var(--font-125);
+    }
+
+    .insurance-details p{
+        font-size: var(--font-1);
+        text-align: justify;
+    }
+
+    .insurance-list{
+        width: 100%;
+    }
+
+    .insurance-list h5{
+        font-size: var(--font-125);
+    }
+
+    /* license */
+
+    .license-ctrl h3{
+        font-size: var(--font-2);
+    }
+
+    .list-ctrl{
+        grid-template-columns: 1fr;
+    }
+
+    /* footer */
+
+    .foot-ctrl{
+        flex-direction: column;
+    }
+
+    .copt-ctrl{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 10%;
+    }
+
+    .message-main p{
+        padding: 10px;
+    }
+
+
+    /* About us styling */
+
+    .About-Us h1{
+        font-size: var(--font-2);
+        margin-top: 70px;
+    }
+
+    .text-about{
+        grid-template-columns: 1fr;
+    }
+
+    .text-about h4{
+        font-size: var(--font-15);
+        margin-top: 20px;
+    }
+
+    .text-about li{
+        font-size: var(--font-1);
+    }
+
+    .text-about h6{
+        font-size: var(--font-1);
+    }    
+
+    .text-about p{
+        font-size: var(--font-1);
+    }
+
+    .our-mission{
+        margin-top: 20px;
+    }
+
+    .our-mission p{
+        font-size: var(--font-1);
+        line-height: 30px;
+        text-align: justify;
+    }
+
+    .copyright{
+        flex-direction: column;
+    }
+
+    .trk-ctrl h6{
+        font-size: var(--font-15);
+    }
+
+
+    /* consolidation styling */
+    .img-conso{
+        margin-top: 60px;
+    }
+
+    .img-conso div h1{
+        font-size: var(--font-15);
+    }
+
+    .img-conso div p{
+        font-size: var(--font-1);
+    }
+
+    .text-only p{
+        font-size: var(--font-1);
+    }
+
+    .first-after h3{
+        font-size: var(--font-1);
+    }
+
+    .first-after p{
+        font-size: var(--font-1);
+        line-height: 30px;
+    }
+
+    .step-steps h3{
+        font-size: var(--font-1);
+    }
+
+    .num-ctrl div:nth-child(2) h5{
+        font-size: var(--font-1);
+    }
+
+    .conso-list{
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* table styling */
+    .package-user-details{
+        margin-top: 20%;
+        overflow: hidden;
+    }
+
+    .package-user-details h3{
+        font-size: 20px;
+        text-align: left;
+    }
+    table{
+        width: 100%;
+        
+    }
+
+    table thead tr td{
+        font-size: 14px;
+    }
+
+    tbody tr td{
+        font-size: 12px;
+    }
+
+    tbody tr td:nth-child(4){
+        display: none;
+    }
+
+    table thead tr td:nth-child(4){
+        display: none;
+    }
+
+    .packager-details{
+        overflow: hidden;
+    }
+
+    .packager-details .ph-ctrl{
+        width: 100%;
+        padding: 0px 0px 0px 30px;
+    }
+
+    .packager-details h3{
+        font-size: 20px;
+    }
+
+    .pp-control div h4{
+        font-size: 14px;
+    }
+
+    .pp-control div p{
+        font-size: 12px;
+    }
+
+    .package-user-details .pp-details, .to-fro-location{
+        width: 100%;
+        padding: 0px 0px 0px 30px;
+    }
+    .to-fro-location p{
+        font-size: 12px;
+    }
+
+    .to-fro-location h4{
+        font-size: 14px;
+    }
+
+    .pp-details p{
+        font-size: 12px;
+    }
+
+    .pp-details h4{
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (min-width: 451px) and (max-width: 620px){
+    /* .specialization */
+
+    .specialization-head h3{
+        font-size: 1.2rem;
+    }
+
+    .spec-details{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .customer-care img{
+        width: 100%;
+    }
+
+    .customer-care .cus-ser-text h4{
+        font-size: 1.3rem;
+    }
+
+    .customer-care .cus-ser-text p{
+        font-size: 1.1rem;
+    }
+
+    .list-ctrl{
+        grid-template-columns: 1fr;
+    }
+
+    .nav_content{
+        gap: 7px;
+    }
+
+    .nav_content a li{
+        font-size: clamp(13px, 2vw, 20px);
+    }
+    
+    .customer-care{
+        width: 100%;
+        grid-template-columns: 80px 1fr;
+    }
+    .copt-ctrl{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 10%;
+    }
+
+}

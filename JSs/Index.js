@@ -9,19 +9,15 @@ let errorMsg = document.querySelector(".error-display")
 const users = ["1234567890", "0987654321"]
 // isValid = false
 // // humberger script
-humburger.addEventListener("click", function(){
+humburger.addEventListener("click", function () {
     menuList.classList.toggle("active")
-    
-    if (humburger.classList.contains("fa-bars")){
+
+    if (humburger.classList.contains("fa-bars")) {
         humburger.classList.replace("fa-bars", "fa-xmark")
-    }
-    
-    else{
+    } else {
         humburger.classList.replace("fa-xmark", "fa-bars")
     }
 })
-
-
 
 // function shipmentDetails(){
 //     let trackNum = document.querySelector(".track-num").value
@@ -41,9 +37,6 @@ humburger.addEventListener("click", function(){
 
 // }
 
-
-
-
 // Form.addEventListener("submit", (e)=>{
 //     if(!shipmentDetails()){
 //         e.preventDefault()
@@ -51,34 +44,36 @@ humburger.addEventListener("click", function(){
 
 // })
 
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".main-form")
 
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('.main-form');
-
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form submission
+    form.addEventListener("submit", function (event) {
+        event.preventDefault() // Prevent form submission
 
         // Example condition: Check if the input value is not empty
-        const inputValue = document.querySelector('.track-num').value;
+        const inputValue = document.querySelector(".track-num").value
         if (inputValue == "") {
             // Redirect to the table page with the validated data
-            console.log("Pls Enter number")
             errorMsg.innerHTML = "Please Enter a Tracking Number"
-        } 
-        else if(inputValue == users[0]){
-            window.location.href = `/HTMLs/shipment-details.html?inputValue=${encodeURIComponent(inputValue)}`;
-        }
-
-        else if(inputValue == users[1]){
-            window.location.href = `/HTMLs/shipment-details.html?inputValue=${encodeURIComponent(inputValue)}`;
-        }
-        
-        else {
-            console.log('Please enter a valid value.');
+            setTimeout(() => {
+                errorMsg.innerHTML = ""
+            }, 3000)
+        } else if (inputValue == users[0]) {
+            window.location.href = `/HTMLs/shipment-details.html?inputValue=${encodeURIComponent(
+                inputValue
+            )}`
+        } else if (inputValue == users[1]) {
+            window.location.href = `/HTMLs/shipment-details.html?inputValue=${encodeURIComponent(
+                inputValue
+            )}`
+        } else {
             errorMsg.textContent = "Invalid Tracking Number"
+            setTimeout(() => {
+                errorMsg.textContent = ""
+            }, 3000)
         }
-    });
-});
+    })
+})
 
 // mailing
 
@@ -107,5 +102,3 @@ document.addEventListener('DOMContentLoaded', function() {
 //         alert('Failed to send email. Please try again.');
 //     });
 // });
-
-

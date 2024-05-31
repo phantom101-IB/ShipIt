@@ -2,7 +2,6 @@
 //     let tBody = document.querySelector(".t-body")
 // }
 
-
 // newTd()
 // document.addEventListener('DOMContentLoaded', function() {
 //     const form = document.querySelector(".main-form")
@@ -10,12 +9,10 @@
 //     // const TrackBtn = document.querySelector(".track-btn")
 //     const tBody = document.querySelector(".t-body")
 
-
-
 //     // TrackBtn.addEventListener("click", ()=>{
 //     //     if(TrackNum.value == "1234567890"){
 //     //         addC()
-            
+
 //     //        console.log("Phantom")
 //     //     }
 
@@ -47,27 +44,24 @@
 
 // });
 
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
     // const tBody = document.querySelector('.t-body');
 
     const usersData = ["1234567890", "0987654321"]
 
     // Get the query parameter from the URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const inputValue = urlParams.get('inputValue');
+    const urlParams = new URLSearchParams(window.location.search)
+    const inputValue = urlParams.get("inputValue")
 
     if (inputValue == usersData[0]) {
         // If the input value exists, add a new table row
-        addTableRow();
-    }
-
-    else if(inputValue == usersData[1]){
+        addTableRow()
+    } else if (inputValue == usersData[1]) {
         addTableRow1()
     }
 
     function addTableRow() {
-        const tBody = document.querySelector('.t-body');
+        const tBody = document.querySelector(".t-body")
         // user details var
         const TrackingNumber = document.getElementById("tracking-num")
         const packageId = document.getElementById("package-id")
@@ -90,7 +84,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // const newRow = document.createElement('tr');
         // Add cells to the row, adjust as needed
-        tBody.insertAdjacentHTML("beforeend", `
+        tBody.insertAdjacentHTML(
+            "beforeend",
+            `
             <tr>
                 <td>Nov 23, 2023 12:30 PM</td>
                 <td>In Transit</td>
@@ -103,13 +99,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 <td>Ghana, ACC</td>
                 <td>Courrier Pickup</td>
             </tr>
-        `)
+            <tr>
+                <td>Dec 23, 2023 01:30 PM</td>
+                <td>In Transit</td>
+                <td>Ghana, ACC</td>
+                <td>Courrier Pickup</td>
+            </tr>
+        `
+        )
         // newRow.innerHTML = `<td>${value}</td><td>New Data</td>`;
         // tBody.appendChild(newRow);
     }
 
     function addTableRow1() {
-        const tBody = document.querySelector('.t-body');
+        const tBody = document.querySelector(".t-body")
         // user details var
         const TrackingNumber = document.getElementById("tracking-num")
         const packageId = document.getElementById("package-id")
@@ -132,7 +135,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // const newRow = document.createElement('tr');
         // Add cells to the row, adjust as needed
-        tBody.insertAdjacentHTML("beforeend", `
+        tBody.insertAdjacentHTML(
+            "beforeend",
+            `
             <tr>
                 <td>Nov 23, 2023 12:30 PM</td>
                 <td>In Transit</td>
@@ -145,12 +150,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 <td>Ghana, ACC</td>
                 <td>Courrier Pickup</td>
             </tr>
-        `)
+        `
+        )
         // newRow.innerHTML = `<td>${value}</td><td>New Data</td>`;
         // tBody.appendChild(newRow);
     }
-
-    
-
-   
-});
+})

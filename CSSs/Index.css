@@ -128,7 +128,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background:linear-gradient(90deg, rgba(1, 60, 199, 0.8) 0%, rgba(81, 1, 107, 0.8) 65%, rgba(2,29, 151, 0.7) 100%), url(/Images/Cargo.jpg) no-repeat center center/cover;
+    background:linear-gradient(90deg, rgba(1, 60, 199, 0.8) 0%, rgba(81, 1, 107, 0.8) 65%, rgba(2,29, 151, 0.7) 100%), url(./Images/Cargo.jpg) no-repeat center center/cover;
     box-shadow: inset 10px 20px 100px rgba(0, 0, 0, 0.5);
 }
 
